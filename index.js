@@ -94,7 +94,7 @@ function processLastItem(stringList, callback) {
 
 //arguments - numberList, callback function
 function processSum(numberList,callback) {
-  const sum = numberList.reduce(function(accumulator, currentValue){
+ const sum = numberList.reduce(function(accumulator, currentValue){
     return accumulator + currentValue;
   }, 0);
   return callback(sum);
@@ -119,8 +119,11 @@ function processSum(numberList,callback) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* code here */) {
-}
+function processProduct(num1, num2, callback) {
+  return callback(num1 * num2);
+  }
+  
+
 
 /**
  * ### Challenge `processContains`
@@ -142,7 +145,7 @@ function processProduct(/* code here */) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
+function processContains(item, list, callback) {
   /* CODE HERE */
 }
 
@@ -187,8 +190,14 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+//forEach()
+//array ~ runners
+//return array ~full names
+function getFullNames(runners) {
+   return runners.map(runner => {
+    return  `${runner.last_name}, ${runner.first_name}`;
+   });
+
 }
 
 /**
