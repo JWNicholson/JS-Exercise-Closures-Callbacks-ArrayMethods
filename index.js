@@ -38,9 +38,10 @@ function processFirstItem(stringList, callback) {
  * Implement a higher-order function called `processLength`.
  * It takes two arguments:
  * @param list an array with elements of any type.
+ * //array 
  * @param callback function that takes a number as its argument.
  * @returns the result of invoking `callback` passing the LENGTH of `list`.
- * 
+ * //callback(list.length)
  * Examples of usage of this higher-order function:
  * [1] Invoking `processLength` passing `['foo', 'bar']` and `(num) => num + 1000`,
  * should return 1002.
@@ -48,9 +49,10 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
-  /* CODE HERE */
+function processLength(list, callback) {
+  return callback(list.length);
 }
+
 
 /**
  * ### Challenge `processLastItem`
@@ -66,8 +68,8 @@ function processLength(/* CODE HERE */) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
-  /* CODE HERE */
+function processLastItem(stringList, callback) {
+  return callback(stringList[stringList.length -1 ]);
 }
 
 /**
@@ -87,7 +89,7 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
+function processSum(numberList,callback) {
   /* CODE HERE */
 }
 
