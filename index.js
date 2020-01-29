@@ -253,10 +253,11 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  * @returns a number which is the sum of the donations by all runners.
 */
 function tallyUpDonations(runners,callback) {
-  const tally = runners.reduce(function(acumulator,nextVal){
-    return acumulator + nextVal.donation;
+  const tally = runners.reduce(function(acumulator,curVal){
+    return acumulator + curVal.donation;
   }, 0);
-  return callback(tally);
+ // return callback(tally);
+ return tally;
 }
 
 /////////////// CLOSURES ///////////////
@@ -283,7 +284,7 @@ function counterMaker() {
   }
 return mCounter;
 }
-console.log(counterMaker());
+
 /**
  * ### Challenge `counterMakerWithLimit`
  * 
