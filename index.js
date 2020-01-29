@@ -170,8 +170,12 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+function processDuplicateFree(arr) {
+  //if the current item is the same as the first occurence of that value ,duplicate,go back to the new array created by filter
+ const remDupes = arr.filter((item,index) => {
+   return arr.indexOf(item) === index;
+ });
+ return remDupes;
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
